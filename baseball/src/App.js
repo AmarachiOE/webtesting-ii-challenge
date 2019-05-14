@@ -56,7 +56,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome</h1>
+        <h1>Baseball Web Testing II </h1>
         <Display
           ballsCount={this.state.ballsCount}
           strikesCount={this.state.strikesCount}
