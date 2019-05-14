@@ -59,17 +59,19 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Baseball Web Testing II </h1>
-        <Display
-          ballsCount={this.state.ballsCount}
-          strikesCount={this.state.strikesCount}
-        />
-        <Dashboard
-          gotBall={this.gotBall}
-          gotHit={this.gotHit}
-          gotStrike={this.gotStrike}
-          gotFoul={this.gotFoul}
-        />
+        <h1>Baseball - Web Testing II </h1>
+        <div className="app-components">
+          <Display
+            ballsCount={this.state.ballsCount}
+            strikesCount={this.state.strikesCount}
+          />
+          <Dashboard
+            gotBall={this.gotBall}
+            gotHit={this.gotHit}
+            gotStrike={this.gotStrike}
+            gotFoul={this.gotFoul}
+          />
+        </div>
       </div>
     );
   }
