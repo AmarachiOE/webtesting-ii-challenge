@@ -16,8 +16,8 @@ class App extends React.Component {
   gotBall = e => {
     e.preventDefault();
     this.setState(prevState => {
-
-      const newBallsCount = prevState.ballsCount === 3 ? 0 : prevState.ballsCount + 1;
+      const newBallsCount =
+        prevState.ballsCount === 3 ? 0 : prevState.ballsCount + 1;
       return {
         ballsCount: newBallsCount
       };
@@ -26,13 +26,14 @@ class App extends React.Component {
 
   gotHit = e => {
     e.preventDefault();
-    this.setState({ ballsCount: 0, strikesCount: 0 })
+    this.setState({ ballsCount: 0, strikesCount: 0 });
   };
 
   gotStrike = e => {
     e.preventDefault();
     this.setState(prevState => {
-      const newStrikesCount = prevState.strikesCount === 2 ? 0 : prevState.strikesCount + 1;
+      const newStrikesCount =
+        prevState.strikesCount === 2 ? 0 : prevState.strikesCount + 1;
 
       return {
         strikesCount: newStrikesCount
@@ -44,13 +45,15 @@ class App extends React.Component {
     e.preventDefault();
 
     this.setState(prevState => {
-      const newStrikesCount = prevState.strikesCount < 2 ? prevState.strikesCount + 1 : prevState.strikesCount;
-      
+      const newStrikesCount =
+        prevState.strikesCount < 2
+          ? prevState.strikesCount + 1
+          : prevState.strikesCount;
+
       return {
         strikesCount: newStrikesCount
-      }
-
-    })
+      };
+    });
   };
 
   render() {
